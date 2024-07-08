@@ -1,4 +1,4 @@
-# Sitemate Travel Search App
+# Sitemate News Search App
 
 A simple mobile app built with React Native that calls the News API to search for news articles based on a user's search term. The app displays the results in a list format and stores the search history for easy access.
 
