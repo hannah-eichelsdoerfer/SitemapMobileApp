@@ -44,6 +44,7 @@ A simple mobile app built with React Native that calls the News API to search fo
 
 ## Future Improvements
 
+- **Clean Code:** Seperate code into seperate files (utils, components, types and so on)
 - **Ease of Use:** Implement Web View to view full articles.
 - **Styling:** Further improve the UI/UX with custom designs.
 - **Usability:** Add features like filters and sorting options.
