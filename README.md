@@ -51,4 +51,4 @@ A simple mobile app built with React Native that calls the News API to search fo
 
 ## Demo Video
 
-A Loom video demonstrating the app's functionality can be found [here](https://www.loom.com/share/35d59f605a414adeafb62b17076077f1).
+A Loom video demonstrating the app's functionality can be found [here](https://www.loom.com/share/0394076c19c6453b84e366e9075b2877).
