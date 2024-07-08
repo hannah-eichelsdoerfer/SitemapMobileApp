@@ -8,12 +8,12 @@ type SearchProps = {
 
 export default function Search({ query, setQuery, searchNews }: SearchProps) {
   return (
-    <View className="flex-row justify-between rounded-full border border-violet-500 p-2">
+    <View className="flex-row justify-between rounded-full border border-violet-300 p-2">
       <TextInput
         placeholder="Search news..."
         value={query}
         onChangeText={setQuery}
-        className="mx-5"
+        className="ml-4 flex-1"
       />
       <Pressable
         className="rounded-full bg-violet-300 px-5 py-2 justify-center"
