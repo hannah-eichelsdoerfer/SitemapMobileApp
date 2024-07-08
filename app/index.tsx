@@ -6,11 +6,13 @@ import {
   Alert,
   ActivityIndicator,
   Button,
+  Pressable,
 } from 'react-native';
 import axios from 'axios';
 import Search from '@/components/SearchBar';
 import { Link } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { MaterialIcons } from '@expo/vector-icons';
 
 type Article = {
   title: string;
@@ -77,20 +79,41 @@ const SearchScreen = () => {
     }
   };
 
+  const clearHistory = async () => {
+    try {
+      await AsyncStorage.removeItem('searchHistory');
+      setHistory([]);
+      setShowHistory(false);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <View className="my-2 mx-5 space-y-5">
       <Search query={query} setQuery={setQuery} searchNews={searchNews} />
       {/* Display Toggle with History */}
       {history.length > 0 && (
-        <Button
-          title="Show Search History"
-          onPress={() => setShowHistory(!showHistory)}
-        />
+        <Pressable onPress={() => setShowHistory(!showHistory)}>
+          <Text className="text-sm text-gray-500 text-center">
+            {showHistory ? 'Hide' : 'Show'} Search History
+          </Text>
+        </Pressable>
       )}
+
       {showHistory && (
-        <View className="flex-row flex-wrap">
+        <View className="flex-row flex-wrap items-center gap-2">
+          <MaterialIcons
+            color={'#c4b5fd'}
+            className="p-1"
+            name="delete"
+            size={24}
+            onPress={clearHistory}
+          />
           {history.map((item, index) => (
-            <Button key={index} title={item} onPress={() => setQuery(item)} />
+            <Pressable key={index} onPress={() => setQuery(item)}>
+              <Text className="text-sm text-gray-500 underline">{item}</Text>
+            </Pressable>
           ))}
         </View>
       )}
