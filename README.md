@@ -12,7 +12,7 @@ A simple mobile app built with React Native that calls the News API to search fo
 ## Technology Choices
 
 - **React Native:** Framework for building the mobile app.
-- **Axios:** Library for making HTTP requests to the Travel Advisor API.
+- **Axios:** Library for making HTTP requests to the News API.
 - **tailwind:** NativeWind uses Tailwind CSS as scripting language to create a universal style system for React Native
 - **AsyncStorage:** For storing search history locally.
 
@@ -22,7 +22,7 @@ A simple mobile app built with React Native that calls the News API to search fo
 
    ```bash
    git clone <repository-url>
-   cd SitemateTravelApp
+   cd SitemateMobileApp
    ```
 
 2. **Install dependencies:**
